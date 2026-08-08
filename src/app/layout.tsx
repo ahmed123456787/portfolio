@@ -1,31 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space",
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Zater Ahmed — Full Stack Developer",
+  title: "Zater Ahmed — Full-Stack Developer",
   description:
-    "Full Stack Developer from Algeria. React, Node.js, Django. Building performant, well-architected web products.",
+    "Full-stack developer building performant React interfaces and the systems behind them. Available for freelance and contract work.",
   metadataBase: new URL("https://zaterahmed.dev"),
   openGraph: {
-    title: "Zater Ahmed — Full Stack Developer",
-    description: "Full Stack Developer from Algeria. React, Node.js, Django.",
+    title: "Zater Ahmed — Full-Stack Developer",
+    description:
+      "Full-stack developer building performant React interfaces and the systems behind them.",
     type: "website",
   },
 };
@@ -34,14 +31,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable}`}
-    >
-      <body className="relative">
-        <div className="noise" />
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
