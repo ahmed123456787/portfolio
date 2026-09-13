@@ -182,7 +182,7 @@ export const projects: Project[] = [
       "Built for clinic onboarding in under a day",
     ],
     stack: ["React", "Django", "DRF", "PostgreSQL", "Docker"],
-    url: "https://www.thrivedoc.org/",
+    url: "https://www.thrivedoc.net/",
     image: "/projects/thrivedoc.jpg",
     accent: "from-cyan-400 to-blue-500",
   },
